@@ -1,0 +1,64 @@
+#login>div {
+	background-color: rgb(186, 228, 226);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+/* 로그인 창 2번째 줄 css */
+#login .line_2nd_before_login {
+	margin-top: 15px;
+	padding-left: 20px;
+}
+/* 로그인 창 2번째 줄 에서 login버튼 css */
+#login_btn {
+	font-weight: 500;
+	text-align: center;
+	background-color: darkcyan;
+	border: 5px solid rgba(0, 80, 80, 0.096);
+	border-radius: 0.3rem;
+}
+
+#login_btn:hover {
+	color: cyan;
+}
+/* 로그인 창 3번째 줄 */
+#login line_3rd_before_login{
+	font-size: small;
+	padding-left: 20px;
+}
+
+#login>div>div:last-child {
+	display: flex;
+}
+
+/* 회원가입 a태그rgb(0, 157, 157)0, 157, 157)0, 108, 108)0, 166, 166)디또는 비밀번호 찾기 a 태그 css */
+#login>div>div:last-child a {
+	color: rgb(75, 75, 75);
+	font-weight: 700;
+	margin: 2px;
+/* 	a태그 밑줄 제거 */
+	text-decoration-line: none; 
+}
+
+#login>div>div:last-child a:hover {
+	color: cyan;
+}
+
+#login>div>div:first-child {
+	font-size: large;
+	font-weight: 600;
+	margin-left: 20px;
+}
+
+/* #login .line_1st_after_after{ */
+/* 	font-size:50px; */
+/* 	border-bottom: 5px dashed rgb(22, 129, 113); */
+	
+/* } */
+
+/* #login .line_2nd_after_login{ */
+/* 	display:flex; */
+/* 	border:1px solid black; */
+/* } */
+
+

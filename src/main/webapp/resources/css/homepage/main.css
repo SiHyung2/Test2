@@ -1,0 +1,71 @@
+#main{
+    margin-bottom: 30px;
+}
+#main>header{
+    width: 100%;
+    height: 58%;
+    padding: 15px 15px 15px 15px;    /*  글자 세로 정렬을 위해 */
+    text-align: center;
+    background-color: rgb(236, 199, 192);
+    border-bottom: 5px solid rgb(243, 217, 210);
+}
+
+#main>section{
+    font-family: "Noto Sans KR", sans-serif !important;
+    font-size: 30px;
+    width: 100%;
+    height: 42%;
+    background-color: rgb(250, 238, 228) !important;
+    margin-bottom: 30px;
+}
+
+/* 이코드가 있어야 부트스트랩 드롭다운메뉴가 작동한다 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+#main>header a{
+    color:#333333;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    font-weight: 500;
+    padding-left: 150px;
+    text-decoration-line: none; /* a태그 밑줄 제거*/
+}
+/* 드롭다운 제목 css */
+.nav-link-inner--text{
+    color: rgba(0, 70, 70, 0.726) !important;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration-line: none; /* a태그 밑줄 제거*/
+}
+/* 드롭다운 내용 a태그 */
+.dropdown-item{
+    color: rgba(0, 0, 0, 0.726);
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration-line: none; /* a태그 밑줄 제거*/
+}
+
+#main img{
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-right: 80px;
+    margin-top: 15px;
+    background-color:transparent;
+}
+
+/* 메뉴에 li태그의 점을 없애준다 */
+li {
+    list-style-type: none;
+}

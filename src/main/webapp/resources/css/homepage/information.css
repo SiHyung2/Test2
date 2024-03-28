@@ -1,0 +1,29 @@
+#infomation>div{
+    display: flex;
+    height: 70px;
+}
+
+#infomation>div:hover{
+    transform: translateX( 10px )
+}
+
+#circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(98, 124, 122, 0.72);
+    margin-left: 20px;
+    /* flex:2; */
+}
+
+#info_btn{
+    color: black;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: center;
+    text-decoration-line: none; /* a태그 밑줄 제거*/
+    flex:1;
+}
+#info_btn:hover{
+    color: orange;
+}

@@ -1,0 +1,31 @@
+#main{
+    margin-bottom: 30px;
+}
+#main>header{
+    width: 100%;
+    height: 191px;
+    padding: 15px 15px 15px 15px;    /*  글자 세로 정렬을 위해 */
+    text-align: center;
+    background-color: rgb(236, 199, 192);
+    border-bottom: 5px solid rgb(243, 217, 210);
+}
+
+#main>header a{
+    color:#333333;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    font-weight: 500;
+    padding-left: 150px;
+    text-decoration-line: none; /* a태그 밑줄 제거*/
+}
+
+#main img{
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-right: 80px;
+    margin-top: 15px;
+    background-color:transparent;
+}

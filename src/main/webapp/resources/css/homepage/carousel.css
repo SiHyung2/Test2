@@ -1,0 +1,33 @@
+/* 캐러셀 css 모음 */
+#carousel {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* 캐러셀의 silde박스 크기 조정 */
+    height: calc((100% - 30px)) !important;  
+
+    /* 가운데 슬라이드 텍스트 정렬 수직으로 굳이 필요한건 아님*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide>img{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}

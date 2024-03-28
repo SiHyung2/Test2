@@ -1,0 +1,60 @@
+#link{
+	height:320px;
+    background-color: rgb(163, 219, 216);
+    border-radius: 0.5rem;
+    /* 마진이 마이너스 이므로 로그인창과 링크창이 겹쳐짐에 유의 */
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+#link header{
+    color: white;
+    font-size: x-large;
+    font-weight: 1000;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(63, 180, 174);
+    border: 3px solid rgb(72, 161, 157);
+    border-radius: 0.5rem;
+    margin-bottom: 5px;
+}
+#link>div>div{
+    height: 65px;
+    margin-left: 30px;
+    padding: 5px;
+}
+#link #server{
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+#link #server>a{
+    color: black;
+    font-size: xx-large;
+    font-weight: 1000;
+    text-decoration-line: none; /* a태그 밑줄 제거*/
+}
+#link #server>a:hover{
+    color: orange;
+}
+
+/* 꾸미기용 작은 사각형 css 4개 */
+#link #square{
+    /* width: 6px; span태그에는 크기 속성을 넣을 수 없다 */
+    /* height: 30px; */
+    font-size: x-large;
+    margin: 0px 10px 5px 0px;
+}
+#link>div>div:nth-of-type(1)>#square{
+    background-color: rgb(218, 255, 253);
+}
+#link>div>div:nth-of-type(2)>#square{
+    background-color: rgb(179, 253, 250);
+}
+#link>div>div:nth-of-type(3)>#square{
+    background-color: rgb(122, 255, 248);
+}
+#link>div>div:nth-of-type(4)>#square{
+    background-color: rgb(71, 252, 243);
+}

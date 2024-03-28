@@ -1,0 +1,77 @@
+#popular{
+    /* 인기게시판 크기를 고정크기로 해서 자유게시판과 겹쳐짐에 유의 */
+    height: 300px;
+    background-color:rgb(243, 240, 240);    
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+
+#popular>header{
+    display: flex;
+    height: 90px;
+    border-bottom: 5px dashed rgb(195, 231, 241);
+}
+#popular>header a{
+    text-decoration-line: none; /* a태그 밑줄 제거*/
+    color: black;
+}
+#popular>header a:hover{
+    color:navy;
+}
+#popular>header>div:nth-child(1){
+    width: 50%;
+    margin-right: 100px;
+    padding-left: 70px;
+    padding-top: 10px;
+    font-size: 45px;
+    font-weight: 1000;
+}
+#popular>header>div:nth-child(2){
+    width: 250px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+#popular>header>div:nth-child(3){
+    width: 250px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+#popular>section{
+    padding-top: 15px;
+    padding-left: 30px;
+    /* 인기게시판과 자유게시판이 겹치도록 만들어져서 높이는 고정크기로 해야함 */
+    height: 200px;
+    display: flex;
+}
+#popular .image_post{
+    width: 180px;
+    height: 185px;
+}
+#popular .image_post>img{
+    width: 180px;
+    height: 135px;
+    overflow: hidden;
+}
+#popular .image_post>div{
+    width: 180px;
+    height: 50px;
+    overflow: hidden;
+}
+#popular a{
+    color: black;
+    text-decoration-line: none; /* a태그 밑줄 제거*/
+}
+
+#popular .post_list{
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#popular .post_list>div{
+    height: 30px;
+    overflow: hidden;
+}

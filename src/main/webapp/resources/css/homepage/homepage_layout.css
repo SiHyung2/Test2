@@ -1,0 +1,54 @@
+.wrapper{
+    display : grid;
+    grid-template-columns: 330px 1235px 350px;
+    grid-template-rows: 200px 120px 85px 200px 100px 340px;
+}
+
+#main{
+    grid-area:1/1/2/4;
+}
+#login{
+    grid-area:2/1/4/2;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#carousel{
+    grid-area:2/2/4/3;
+}
+#search{
+    grid-area:2/3/3/4;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#link{
+    grid-area:4/1/6/2;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#popular{
+    grid-area:4/2/5/3;
+    margin-top: 30px;
+}
+#notification{
+    grid-area:3/3/6/4;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#infomation{
+    margin-top: 30px;
+
+    grid-area:6/1/7/2;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#freedom{
+    margin-top: 30px;
+
+    grid-area:5/2/7/3;
+}
+#game{
+    margin-top: 30px;
+    grid-area:6/3/7/4;  
+}

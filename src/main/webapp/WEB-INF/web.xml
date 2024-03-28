@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+	<!-- 보안 역할을 정의합니다. -->
+	<security-role>
+		<!-- 역할에 대한 설명을 입력합니다. -->
+		<description></description>
+		<!-- 역할의 이름을 지정합니다. -->
+		<role-name>admin</role-name>
+	</security-role>
+
+	<!-- 웹 리소스에 대한 보안 제약 조건을 정의합니다. -->
+	<security-constraint>
+		<!-- 보안 제약 조건의 표시 이름을 설정합니다. -->
+		<display-name>WebMarket 보안</display-name>
+		<web-resource-collection>
+			<!-- 웹 리소스 집합의 이름을 설정합니다. -->
+			<web-resource-name>WebMarket3</web-resource-name>
+			<!-- 웹 리소스에 대한 설명을 입력합니다. -->
+			<description></description>
+			<!-- 보호할 웹 리소스의 URL 패턴을 설정합니다. -->
+			<url-pattern>/addProduct.jsp</url-pattern>
+			<url-pattern>/editProduct.jsp</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<!-- 역할이 요구되는 경우에 대한 설명을 입력합니다. -->
+			<description>권한 관리자명</description>
+			<!-- 보호된 웹 리소스에 접근할 수 있는 역할을 지정합니다. -->
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<!-- 로그인 구성을 설정합니다. -->
+	<login-config>
+		<!-- 인증 방법을 설정합니다. -->
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<!-- 로그인 페이지의 경로를 지정합니다. -->
+			<form-login-page>/login.jsp</form-login-page>
+			<!-- 로그인 실패 페이지의 경로를 지정합니다. -->
+			<form-error-page>/login_failed.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+
+	<!-- HTTP 오류 페이지를 설정합니다. 
+	지금은 필요없음-->
+	<!-- 11장 예외처리 -->
+<!-- 	<error-page> -->
+		<!-- 오류 코드를 지정합니다. -->
+<!-- 		<error-code>404</error-code> -->
+		<!-- 오류 발생 시 이동할 페이지의 경로를 지정합니다. -->
+<!-- 		<location>/exceptionNoPage.jsp</location> -->
+<!-- 	</error-page> -->
+
+	<!-- 필터를 설정합니다. -->
+	<!-- 12장 필터 -->
+	<filter>
+		<!-- 필터의 이름을 지정합니다. -->
+		<filter-name>LogFilter</filter-name>
+		<!-- 필터 클래스의 경로를 지정합니다. -->
+		<filter-class>filter.LogFilter</filter-class>     
+	</filter>
+	<filter-mapping>
+		<!-- 필터의 이름을 지정합니다. -->
+		<filter-name>LogFilter</filter-name>
+		<!-- 필터를 적용할 URL 패턴을 지정합니다. -->
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<!-- 필터의 이름을 지정합니다. -->
+		<filter-name>LogFileFilter</filter-name>
+		<!-- 필터 클래스의 경로를 지정합니다. -->
+		<filter-class>filter.LogFileFilter</filter-class>
+		<init-param>
+			<!-- 필터 초기화 매개변수의 이름을 지정합니다. -->
+			<param-name>filename</param-name>
+			<!-- 필터 초기화 매개변수의 값을 지정합니다. -->
+			<param-value>c:\\logs\\community.log</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<!-- 필터의 이름을 지정합니다. -->
+		<filter-name>LogFileFilter</filter-name>
+		<!-- 필터를 적용할 URL 패턴을 지정합니다. -->
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 게시판 서블릿을 설정합니다. -->
+	<!-- 18장 게시판 -->
+	<servlet>
+		<!-- 서블릿의 이름을 지정합니다. -->
+		<servlet-name>BoardController</servlet-name>
+		<!-- 서블릿 클래스의 경로를 지정합니다. -->
+		<servlet-class>mvc.controller.BoardController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<!-- 서블릿의 이름을 지정합니다. -->
+		<servlet-name>BoardController</servlet-name>
+		<!-- 서블릿을 매핑할 URL 패턴을 지정합니다. -->
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	
+<!-- 	첫번째 접근 페이지에서 jstl c:url 사용시 url뒤에 jessionid가 붙는 현상을 방지하는 코드이다 -->
+	
+<!-- 	서버에서 클라이언트에 세션을 유지하기 위해 쿠키를 생성해야하는데 클라이언트가 쿠키생성을 허용했는지 불확실하므로 -->
+<!-- 	jsessionid를 붙여서 다니는 것이다 -->
+<!--	그러므로 다음과 같이 세션 식별자를 쿠키에 저장하여 클라이언트와 서버 간의 세션 유지를 지원을 허용하면 해결된다 -->
+<!-- 	세션 유효시간은 2시간으로 설정한다 -->
+	 <session-config>
+	 	<session-timeout>7200</session-timeout>        
+	 	<tracking-mode>COOKIE</tracking-mode>    
+	 </session-config>
+
+
+</web-app>

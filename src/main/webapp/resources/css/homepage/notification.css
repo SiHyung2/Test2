@@ -1,0 +1,38 @@
+#notification{
+    background-color:rgb(244, 227, 206);
+    /* 마진이 마이너스 이므로 검색창과 공지창이 겹쳐짐에 유의 */
+    margin-top: -50px; 
+    margin-left: 30px;
+    border-radius: 5rem;
+    border-bottom: 7px solid rgba(187, 133, 127, 0.404);
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+
+#notification>header{
+    height: 70px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+#notification a{
+    text-decoration-line: none; /* a태그 밑줄 제거*/
+    color: black;
+}
+#notification>header a:hover{
+    color:navy;
+}
+#notification>section{
+    border-top: 20px solid rgba(107, 60, 55, 0.56);
+    padding: 15px 0px 0px 20px;
+}
+
+#notification>section>div{
+    height: 27px;
+    margin-top: 4px;
+    overflow: hidden;
+    /* border: 1px solid black; */
+}
