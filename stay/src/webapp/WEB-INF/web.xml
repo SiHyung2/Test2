@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://Java.sun.com/xml/ns/javaee 
+		http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+	id="going" version="3.1">
+	
+	<display-name>Archetype Created Web Application</display-name>
+  
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>/WEB-INF/*</url-pattern>
+			<include-prelude>/WEB-INF/common/everyLayout.jsp</include-prelude>
+		</jsp-property-group>
+		
+<!-- 		<jsp-property-group> -->
+<!-- 			<url-pattern>/WEB-INF/view/*</url-pattern> -->
+<!-- 			<include-prelude>/WEB-INF/common/head.jsp</include-prelude> -->
+<!-- 			<include-coda>/WEB-INF/common/footer.jsp</include-coda> -->
+<!-- 		</jsp-property-group> -->
+		
+<!-- 		<jsp-property-group> -->
+<!-- 			<url-pattern>/WEB-INF/admin/*</url-pattern> -->
+<!-- 			<include-prelude>/WEB-INF/common/adminLayout.jsp</include-prelude> -->
+<!-- 		</jsp-property-group> -->
+		
+	</jsp-config>  
+	
+	
+ 	<!-- xml일때 서블릿방식 -->
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>	<!-- dispatcher1-servlet.xml -->
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+
+		
+	
+</web-app>
